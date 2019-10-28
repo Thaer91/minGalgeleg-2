@@ -69,7 +69,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 text2.setText("Du har vundet" );
                 text2.setVisibility(View.VISIBLE);
             } if (Galge.erSpilletTabt()) {
-                text2.setText(" متت يا عرصا");
+                text2.setText(" Du er død ");
                 text2.setVisibility(View.VISIBLE);
             }
         }
