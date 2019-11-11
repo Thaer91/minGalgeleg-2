@@ -21,6 +21,7 @@ public class GalgeLogik {
     private boolean spilletErTabt;
 
     public GalgeLogik() {
+
         muligeOrd.add("bil");
         muligeOrd.add("computer");
         muligeOrd.add("programmering");

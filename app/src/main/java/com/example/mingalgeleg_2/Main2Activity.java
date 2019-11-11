@@ -2,6 +2,7 @@ package com.example.mingalgeleg_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     ImageView imageView;
     TextView text1, text2;
     ArrayList <Button> knapper = new ArrayList<>();
+    int winCounter, loseCounter = 0;
+    CurrentGame currGame;
 
 
 
@@ -24,6 +27,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        currGame = CurrentGame.getInstance();
 
         for (int i = 1; i < 27 ; i++) {
             String knapNavn = "knap" + i;
@@ -44,6 +49,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         imageView.setBackground(getDrawable(R.drawable.forkert0));
 
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -66,15 +73,27 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                     }
                 }
             }if (Galge.erSpilletVundet()){
-                text2.setText("Du har vundet" );
-                text2.setVisibility(View.VISIBLE);
+
+                startActivity(new Intent(Main2Activity.this,Win.class));
+                winCounter++;
+                int totalWinCounter = winCounter + currGame.getWinCounter();
+                currGame.setWinCounter(totalWinCounter);
+                Main2Activity.this.finish();
+
             } if (Galge.erSpilletTabt()) {
-                //text2.setText("نحروك يا عكروت  جرب مره تانيه");
-                text2.setText("Du er død :( Prøv igen :)");
-                text2.setVisibility(View.VISIBLE);
+
+                startActivity(new Intent(Main2Activity.this,Lose.class));
+                loseCounter++;
+                int totalLoseCounter = loseCounter + currGame.getLoseCounter();
+                currGame.setLoseCounter(totalLoseCounter);
+                Main2Activity.this.finish();
             }
         }
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
     }
 }
