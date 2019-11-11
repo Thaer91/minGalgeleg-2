@@ -3,6 +3,7 @@ package com.example.mingalgeleg_2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,13 +16,10 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
     private GalgeLogik Galge = new GalgeLogik();
     ImageView imageView;
-    TextView text1, text2;
+    TextView text1;
     ArrayList <Button> knapper = new ArrayList<>();
     int winCounter, loseCounter = 0;
     CurrentGame currGame;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,22 +36,16 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
             Knap.setOnClickListener(this);
         }
 
-
         text1 = findViewById(R.id.text);
         text1.setText(Galge.getSynligtOrd());
-
-        text2 = findViewById(R.id.text2);
-        text2.setVisibility(View.INVISIBLE);
-
         imageView = findViewById(R.id.imageView);
         imageView.setBackground(getDrawable(R.drawable.forkert0));
 
     }
 
-
-
     @Override
     public void onClick(View v) {
+        currGame.setCurrWord(Galge.getOrdet());
         if (!Galge.erSpilletSlut()) {
 
             for (int i = 0; i < knapper.size() ; i++) {
@@ -77,6 +69,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(Main2Activity.this,Win.class));
                 winCounter++;
                 int totalWinCounter = winCounter + currGame.getWinCounter();
+                int totalGames =winCounter+currGame.getTotalGames();
+                currGame.setTotalGames(totalGames);
                 currGame.setWinCounter(totalWinCounter);
                 Main2Activity.this.finish();
 
@@ -85,6 +79,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(Main2Activity.this,Lose.class));
                 loseCounter++;
                 int totalLoseCounter = loseCounter + currGame.getLoseCounter();
+                int totalGames =loseCounter+currGame.getTotalGames();
+                currGame.setTotalGames(totalGames);
                 currGame.setLoseCounter(totalLoseCounter);
                 Main2Activity.this.finish();
             }
@@ -96,4 +92,5 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         super.onResume();
 
     }
+
 }
