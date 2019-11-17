@@ -4,26 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/infopic"
+    android:background="@drawable/nytmain"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="269dp"
-        android:layout_marginEnd="217dp"
-        android:layout_marginBottom="401dp"
-        android:text="Galgeleg"
-        android:textAllCaps="false"
-        android:textColor="#750202"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
@@ -36,7 +18,7 @@
         android:layout_marginBottom="71dp"
         android:lineSpacingExtra="36sp"
         android:text="Start"
-        android:textColor="#5E4435"
+        android:textColor="#A30000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,15 +28,17 @@
 
     <Button
         android:id="@+id/button2"
-        style="@android:style/Widget.Material.Button.Inset"
+        style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="55dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="596dp"
+        android:layout_marginTop="613dp"
         android:layout_marginEnd="340dp"
-        android:layout_marginBottom="88dp"
-        android:background="#00BD1616"
+        android:layout_marginBottom="71dp"
+        android:background="#00554F4F"
         android:text="Om!"
+        android:textColor="#A30000"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
