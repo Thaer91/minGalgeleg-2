@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button a,b;
+    Button a,b,c;
     CurrentGame currGame;
     TextView text;
 
@@ -35,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Info.class));
+            }
+        });
+        c = findViewById(R.id.button7);
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, ResultsActivity.class));
             }
         });
 

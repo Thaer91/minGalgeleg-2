@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="144dp"
-        android:text="Play again"
+        android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -40,7 +40,7 @@
         android:layout_marginTop="400dp"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="261dp"
-        android:text="Ordet var:"
+        android:text="The word is:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
