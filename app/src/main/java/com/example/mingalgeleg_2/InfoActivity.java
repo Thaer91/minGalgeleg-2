@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Info extends AppCompatActivity implements View.OnClickListener {
+public class InfoActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button r,t;
 

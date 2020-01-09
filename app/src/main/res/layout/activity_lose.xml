@@ -5,27 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/lose"
-    tools:context=".Lose">
+    tools:context=".LoseActivity">
 
     <Button
         android:id="@+id/button6"
         style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="158dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="50dp"
         android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/theWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="334dp"
-        android:layout_marginTop="454dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="634dp"
+        android:layout_marginEnd="315dp"
+        android:layout_marginBottom="78dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,14 +33,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/randomText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="334dp"
-        android:layout_marginTop="406dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="306dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="615dp"
+        android:layout_marginEnd="308dp"
+        android:layout_marginBottom="97dp"
         android:text="The word is:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/youLose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="474dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="225dp"
+        android:text="YOU LOSE"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

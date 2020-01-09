@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="false"
-    tools:context=".Main2Activity">
+    tools:context=".GameActivityWord">
 
     <Button
         android:id="@+id/knap9"
@@ -299,6 +299,70 @@
         app:layout_constraintVertical_bias="0.715" />
 
     <Button
+        android:id="@+id/knap27"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="435dp"
+        android:layout_marginEnd="351dp"
+        android:layout_marginBottom="286dp"
+        android:backgroundTint="#99154C"
+        android:shadowColor="#00C51E1E"
+        android:text="æ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/knap28"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="435dp"
+        android:layout_marginEnd="296dp"
+        android:layout_marginBottom="286dp"
+        android:backgroundTint="#707C"
+        android:shadowColor="#00C51E1E"
+        android:text="ø"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/knap29"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="287dp"
+        android:layout_marginTop="437dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="286dp"
+        android:backgroundTint="#34754C"
+        android:shadowColor="#00C51E1E"
+        android:text="å"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/knap30"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="347dp"
+        android:layout_marginTop="437dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="286dp"
+        android:backgroundTint="#693838"
+        android:shadowColor="#00C51E1E"
+        android:text="@"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/knap3"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -387,6 +451,7 @@
         android:layout_marginEnd="179dp"
         android:layout_marginBottom="296dp"
         android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

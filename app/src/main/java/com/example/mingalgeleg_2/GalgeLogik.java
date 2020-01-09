@@ -76,6 +76,16 @@ public class GalgeLogik {
         ordet = muligeOrd.get(new Random().nextInt(muligeOrd.size()));
         opdaterSynligtOrd();
     }
+    // denne metod prøver når man vælger et ord fra listen
+
+    public void nulstilmeantword() {
+        brugteBogstaver.clear();
+        antalForkerteBogstaver = 0;
+        spilletErVundet = false;
+        spilletErTabt = false;
+        ordet = muligeOrd.get(muligeOrd.size()-1);
+        opdaterSynligtOrd();
+    }
 
 
     private void opdaterSynligtOrd() {
@@ -198,5 +208,9 @@ public class GalgeLogik {
 
         System.out.println("muligeOrd = " + muligeOrd);
         nulstil();
+    }
+
+    public ArrayList<String> getMuligeOrd() {
+        return muligeOrd;
     }
 }

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button a,b,c;
+    Button a,b,c,d;
     CurrentGame currGame;
     TextView text;
 
@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Main2Activity.class));
+                startActivity(new Intent(MainActivity.this, GameActivity.class));
             }
         });
         b = findViewById(R.id.button2);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Info.class));
+                startActivity(new Intent(MainActivity.this, InfoActivity.class));
             }
         });
         c = findViewById(R.id.button7);
@@ -42,7 +42,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        c = findViewById(R.id.button8);
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ListeActivity.class));
+            }
+        });
+
+
     }
+
 
 
 }
